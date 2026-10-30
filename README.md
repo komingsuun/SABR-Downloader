@@ -9,8 +9,11 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 🚀 Getting Started
 
   **Clone repository**
+  ```
   git clone https://github.com/USERNAME/SABR-Downloader.git
+  
   cd SABR-Downloader
+  ```
 
 📦 Installation
  
@@ -70,6 +73,7 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 📸 Screenshot
 
 <img width="1784" height="758" alt="Selection_1330" src="https://github.com/user-attachments/assets/72d079de-9bc3-44d4-83d8-ae887905be1a" />
+ 
 
 **Just another vibe-coded project.** 😎
 
