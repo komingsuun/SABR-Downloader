@@ -37,7 +37,7 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
   **Add needed package**
   ```
     pip install -U "yt-dlp[default]"
-    pip install secretstorage
+    pip install pyside6
   ```
 
   **Or**
