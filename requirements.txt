@@ -1,8 +1,11 @@
 brotli==1.2.1
 certifi==2026.10.23
+cffi==2.1.1
 charset-normalizer==3.5.2
+curl_cffi==0.17.0
 idna==3.20
 mutagen==1.48.1
+pycparser==3.12
 pycryptodomex==3.24.1
 PySide6==6.12.0
 PySide6_Addons==6.12.0
