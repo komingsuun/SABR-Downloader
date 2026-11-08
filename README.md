@@ -34,13 +34,14 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 
 ⚙️ Configuration
 
-  **Add needed package**
+  **Add standard needed package**
   ```
     pip install -U "yt-dlp[default]"
+    pip install git+https://github.com/tribixbite/yt-dlp-threads
     pip install pyside6
   ```
 
-  **Or**
+  **Or complete dependencies**
   
   ```pip install -r requirements.txt```
 
