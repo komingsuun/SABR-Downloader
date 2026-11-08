@@ -1,3 +1,30 @@
+#
+# 100% Vibe Coding
+# Program Download Sembarang Video
+# Implementasi yt-dlp untuk mendukung pengunduhan video YouTube dengan Adaptive Bitrate Streaming (SABR)
+
+# Siapkan env untuk project ini beserta package yang dibutuhkan
+# - pip install -U "yt-dlp[default]"
+# - pip install git+https://github.com/tribixbite/yt-dlp-threads
+# - pip install pyside2
+#
+# Siapkan server PO (Proof of Origin) Token Providers
+# - docker run --name bgutil-provider -d --init \\n  -p 127.0.0.1:4416:4416 brainicism/bgutil-ytdlp-pot-provider
+# - docker start bgutil-provider (jalankan kontainer docker jika sudah melakukan create/init sebelumnya)
+
+# Sebelumnya lakukan set dns jika hendak mengakses situs yang diblokir
+# contohnya kalo pakai Claudflare spt berikut ini (meskipun tidak menjamin 100% dapat diakses):
+#
+# sudo resolvectl dns enp3s0 1.1.1.1 1.0.0.1
+# sudo resolvectl flush-caches
+#
+# sudo resolvectl dns wlo1 1.1.1.1 1.0.0.1
+# sudo resolvectl flush-caches
+#
+# Cek apakah situs yg diblokir sdh bisa diakses (kalau tidak lolos kemungkinan besar program ini akan failed):
+# python -c "import requests; r=requests.get('https://situs_nakal_anda.com', timeout=15); print(r.status_code, r.url)"
+#
+
 import os
 import sys
 import shutil
