@@ -73,6 +73,14 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 
 📸 Screenshot
 
+Video Downloader - downloader.py
+
+
+<img width="808" height="773" alt="Screenshot from 2026-11-08 17-43-53" src="https://github.com/user-attachments/assets/8ec4636e-1a7c-4008-bd77-c719e3854731" />
+
+Video Downloader - main.py
+ 
+
 <img width="1784" height="758" alt="Selection_1330" src="https://github.com/user-attachments/assets/72d079de-9bc3-44d4-83d8-ae887905be1a" />
  
 
