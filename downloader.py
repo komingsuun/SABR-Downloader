@@ -245,8 +245,9 @@ class DownloadWorker(QThread):
             "format": "bv*+ba/b",
             "outtmpl": os.path.join(
                 self.output_dir,
-                "%(title).200s [%(id)s].%(ext)s",
+                "%(title).200s [%(id)s].%(ext)s"
             ),
+            "trim_file_name": 100,
             "js_runtimes": {
                 "node": {"path": "/home/pyy/.nvm/versions/node/v22.23.4/bin/node"}
             },
