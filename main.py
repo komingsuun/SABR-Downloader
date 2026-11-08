@@ -6,7 +6,7 @@
 # Siapkan env untuk project ini beserta package yang dibutuhkan
 # - pip install -U "yt-dlp[default]"
 # - pip install git+https://github.com/tribixbite/yt-dlp-threads
-# - pip install secretstorage
+# - pip install pyside2
 #
 # Siapkan server PO (Proof of Origin) Token Providers
 # - docker run --name bgutil-provider -d --init \\n  -p 127.0.0.1:4416:4416 brainicism/bgutil-ytdlp-pot-provider
