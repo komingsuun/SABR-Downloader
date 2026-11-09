@@ -86,9 +86,11 @@ Supported features:
 
 The custom extractor is maintained inside the repository:
 
+```
 yt_dlp_plugins/
 └── extractor/
     └── threads.py
+```
 
 The plugin is loaded by yt-dlp through its plugin discovery mechanism.
 
@@ -104,8 +106,7 @@ The plugin is loaded by yt-dlp through its plugin discovery mechanism.
 
 Video Downloader - downloader.py
 
-
-<img width="808" height="773" alt="Screenshot from 2026-11-08 17-43-53" src="https://github.com/user-attachments/assets/8ec4636e-1a7c-4008-bd77-c719e3854731" />
+<img width="1086" height="825" alt="Screenshot from 2026-11-09 18-32-21" src="https://github.com/user-attachments/assets/79fa09af-b73b-4070-9d19-5b5f652a3899" />
 
 Video Downloader - main.py
  
