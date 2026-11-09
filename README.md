@@ -70,6 +70,35 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
   python -c "import requests; r=requests.get('https://situs_nakal_anda.com', timeout=15); print(r.status_code, r.url)"
   ```
 
+## Threads Support (threads.com)
+
+SABR-Downloader includes a custom yt-dlp extractor plugin
+for downloading publicly accessible videos from Threads.
+
+Supported features:
+- Standard Threads video posts.
+- Quoted video attachments.
+- Progressive MP4 formats.
+- DASH video streams.
+- Video metadata and thumbnails.
+
+### Plugin Structure
+
+The custom extractor is maintained inside the repository:
+
+yt_dlp_plugins/
+└── extractor/
+    └── threads.py
+
+The plugin is loaded by yt-dlp through its plugin discovery mechanism.
+
+### Limitations
+
+- Only publicly accessible Threads posts are supported.
+- Private or login-restricted posts may not be downloadable.
+- Threads may change its internal API or embedded page structure,
+  which can affect extractor compatibility.
+
 
 📸 Screenshot
 
