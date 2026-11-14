@@ -1,5 +1,5 @@
 # ClipCraft
-<img width="2172" height="724" alt="Logo Aplikasi ClipCraft Berkilau" src="https://github.com/user-attachments/assets/6256fe87-6b50-49d2-9314-82b9e02e4eed" />
+<img width="1172" height="324" alt="Logo Aplikasi ClipCraft Berkilau" src="https://github.com/user-attachments/assets/6256fe87-6b50-49d2-9314-82b9e02e4eed" />
 
 
 A Python-based video downloader powered by yt-dlp, supporting YouTube and various other media platforms
