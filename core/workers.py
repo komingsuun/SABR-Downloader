@@ -5,7 +5,7 @@ import uuid
 
 import yt_dlp
 from PySide6.QtCore import QThread, Signal
-
+from PySide6.QtGui import QImage
 from core.downloader import COMPRESSION_PRESETS
 from core.ffmpeg import get_ffmpeg, probe_media
 from core.ffmpeg import get_node
@@ -586,3 +586,55 @@ class CutterWorker(QThread):
         self._cancel_requested = True
         if self._ffmpeg_process and self._ffmpeg_process.poll() is None:
             self._ffmpeg_process.terminate()
+
+# ============================================================
+# Thumbnail strip untuk cutter
+# ============================================================
+class ThumbnailWorker(QThread):
+    thumbnail_ready = Signal(int, QImage)   # index, gambar
+    finished_signal = Signal(bool, str)     # success, pesan
+
+    def __init__(
+        self,
+        input_path: str,
+        duration: float,
+        count: int | None = None,
+        parent=None,
+    ):
+        super().__init__(parent)
+        self.input_path = input_path
+        self.duration = float(duration)
+        self.count = count
+        self._cancel_requested = False
+
+    def run(self):
+        from core import thumbnails
+
+        times = thumbnails.plan_thumbnail_times(self.duration, self.count)
+        if not times:
+            self.finished_signal.emit(False, "Durasi tidak valid.")
+            return
+
+        cache_dir = thumbnails.cache_dir_for(self.input_path)
+        total = len(times)
+        ok_count = 0
+
+        for i, t in enumerate(times):
+            if self._cancel_requested:
+                self.finished_signal.emit(False, "Dibatalkan.")
+                return
+
+            out = thumbnails.thumbnail_path(cache_dir, i)
+            success = thumbnails.extract_one(self.input_path, t, out)
+            if not success:
+                continue
+
+            image = QImage(out)
+            if not image.isNull():
+                self.thumbnail_ready.emit(i, image)
+                ok_count += 1
+
+        self.finished_signal.emit(True, f"{ok_count}/{total} thumbnail siap.")
+
+    def cancel(self):
+        self._cancel_requested = True
