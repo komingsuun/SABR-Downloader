@@ -1,5 +1,6 @@
-# SABR-Downloader
-<img width="100" height="100" alt="Sejak 1970 (2)" src="https://github.com/user-attachments/assets/3606338a-f4ef-4e57-8995-a12c6cf83668" />
+# ClipCraft
+<img width="2172" height="724" alt="Logo Aplikasi ClipCraft Berkilau" src="https://github.com/user-attachments/assets/6256fe87-6b50-49d2-9314-82b9e02e4eed" />
+
 
 A Python-based video downloader powered by yt-dlp, supporting YouTube and various other media platforms
 
@@ -10,9 +11,9 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 
   **Clone repository**
   ```
-  git clone https://github.com/USERNAME/SABR-Downloader.git
+  git clone https://github.com/USERNAME/ClipCraft.git
   
-  cd SABR-Downloader
+  cd ClipCraft
   ```
 
 📦 Installation
@@ -72,7 +73,7 @@ A Python-based video downloader powered by yt-dlp, supporting YouTube and variou
 
 ## Threads Support (threads.com)
 
-SABR-Downloader includes a custom yt-dlp extractor plugin
+ClipCraft includes a custom yt-dlp extractor plugin
 for downloading publicly accessible videos from Threads.
 
 Supported features:
