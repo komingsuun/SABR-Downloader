@@ -95,6 +95,7 @@ class CompressionPage(QWidget):
         btn_row.addWidget(self.cancel_btn)
 
         clear_btn = QPushButton("Bersihkan Log")
+        clear_btn.setObjectName("cleanLogBtn")
         clear_btn.clicked.connect(lambda: self.log_output.clear())
         btn_row.addWidget(clear_btn)
         btn_row.addStretch()

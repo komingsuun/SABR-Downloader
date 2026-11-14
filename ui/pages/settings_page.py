@@ -16,6 +16,7 @@ class _PathRow(QWidget):
 
     def __init__(self, mode: str = "dir"):
         super().__init__()
+        self.setObjectName("settingsPage")
         self.mode = mode
         layout = QHBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -133,6 +134,7 @@ class SettingsPage(QWidget):
         self.save_btn.setObjectName("primaryBtn")
         self.save_btn.clicked.connect(self._save)
         reset_btn = QPushButton("Reset ke Default")
+        reset_btn.setObjectName("cleanLogBtn")
         reset_btn.clicked.connect(self._reset)
         actions.addWidget(self.save_btn)
         actions.addWidget(reset_btn)
